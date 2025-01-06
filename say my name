@@ -1,0 +1,9 @@
+import pyttsx3
+a = pyttsx3.init()
+a.setProperty('rate', 120)
+a.setProperty('volume', 1)
+voices = a.getProperty('voices')
+a.setProperty('voice', voices[1].id)
+text = input("enter text ")
+a.say(text)
+a.runAndWait()
